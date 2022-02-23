@@ -1,5 +1,4 @@
 let hasLock = false
-
 function Initial(){
 document.getElementById("main").style.display = "none"
 document.getElementById("field").style.display = "flex"
@@ -22,7 +21,11 @@ setTimeout(()=>{hasLock = false; clearInterval(interv)}, delay)
 
 }
 
-function click(event){
+function setCustom(x1, x2, y1, y2){
+    click({x: x1, x2: x2, y: y1, y2: y2}, true)
+}
+
+function click(event, custom=false){
 
     if(hasLock){
         return
@@ -44,8 +47,8 @@ userCrircle.style.top = yClick - 25 + "px"
 
 
 
-let xRand = Math.floor(Math.random() * window.innerHeight)
-let yRand = Math.floor(Math.random() * window.innerWidth)
+let xRand = !custom? Math.floor(Math.random() * window.innerHeight) : event.x2
+let yRand = !custom? Math.floor(Math.random() * window.innerWidth) : event.y2
 
 randomGenCircle.style.visibility = "visible"
 randomGenCircle.style.left = xRand - 25 + "px"
@@ -57,6 +60,11 @@ console.log(yRand, xRand)
 
  
 let dist = Math.floor(Math.sqrt(Math.pow((xClick-xRand), 2) + Math.pow((yClick-yRand), 2)))
+
+if(dist < 10){
+    document.write("Чел.....")
+    setTimeout(()=>{window.close()},500)
+}
 
 scoreDisp.innerHTML = dist
 
