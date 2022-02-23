@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' href = 'assets/style.css'>
+    <link rel="shortcut icon" href="assets/image/icon.png" type="image/x-icon">
+    <title>Clicker</title>
+</head>
+<body>
+    <div id="line"></div>
+    <div class="button" id = 'userCrircle'></div>
+    <div class="button" id = 'randomGenCircle' ></div>
+    <div class="field" id = 'field'>
+
+        <div class="output" >
+            Ваш счет: <span id = 'otpt'>0</span>
+        </div>
+        <div class="timer" >
+            Осталось секунд: <span class = 'time' id = 'timer'></span>
+        </div>
+    </div>
+    <div class="score" id = 'stats'>
+        <div class="balance">
+            <span class = 'blc'>Баланс: <span id = 'balance'>0</span></span>
+        </div>
+        <div class="store">
+            <div class="store__prew">
+                Прокачай свою игру:
+            </div>
+            <div class="store__col" >
+                <div class="store__row"  onclick="OpenRedModal();">
+                    <div class="store__row__item red">
+
+                    </div>
+                    <div class="store__row__button">
+                        50
+                    </div>
+                </div>
+                <div class="store__row"  onclick="OpenGreenModal();">
+                    <div class="store__row__item green">
+
+                    </div>
+                    <div class="store__row__button">
+                        50
+                    </div>
+                </div>
+                <div class="store__row"  onclick="OpenPurpleModal();">
+                    <div class="store__row__item purple">
+
+                    </div>
+                    <div class="store__row__button">
+                        50
+                    </div>
+                </div>
+                <div class="store__row"  onclick="OpenGradOneModal();">
+                    <div class="store__row__item grad__one">
+
+                    </div>
+                    <div class="store__row__button">
+                        300
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="score__result__area">
+            <div class="otpt">
+                Ваш счет: <span id = 'result'></span>
+            </div>
+            <div class="bestscore">
+                Ваш рекорд: <span id = 'bestscore'></span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="main" id = 'main'>
+        <div class="main__prewiew__block">
+            <div class="main__prewiew">
+                Hit The Circle
+            </div>
+            <div class="main__disc">
+                Мини игра "кликер" , в которой тебе нужно приблизится к рандомной точке 
+            </div>
+            <div class="main__btn" onclick = 'Initial();'>
+                Начать
+            </div>
+        </div>
+        <div class="developer">
+            <!-- <a href = 'https://t.me/lovkach404' target="blank">Связаться с разработчиком</a> -->
+        </div>
+    </div>    
+    
+<script src = 'assets/scr.js'></script>
+</body>
+</html>
