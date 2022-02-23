@@ -43,6 +43,7 @@ userCrircle.style.left = xClick - 25 + "px"
 userCrircle.style.top = yClick - 25 + "px"
 
 
+
 let xRand = Math.floor(Math.random() * window.innerHeight)
 let yRand = Math.floor(Math.random() * window.innerWidth)
 
@@ -59,6 +60,16 @@ let dist = Math.floor(Math.sqrt(Math.pow((xClick-xRand), 2) + Math.pow((yClick-y
 
 scoreDisp.innerHTML = dist
 
+if (dist>120) {
+    userCrircle.style.background = "linear-gradient(108deg, #673ab7, #f44336)"
+    randomGenCircle.style.background = "linear-gradient(108deg, #673ab7, #f44336)"
+    line.style.background = `rgb(${dist},0,0)`
+}
+else{
+    userCrircle.style.background = "linear-gradient(108deg, #8bc34a, #4caf50)"
+    randomGenCircle.style.background = "linear-gradient(108deg, #8bc34a, #4caf50)"
+    line.style.background = `rgb(0,${dist},0)`
+}
 
 
 
@@ -66,7 +77,7 @@ line.style.visibility  = "visible"
 line.style.width = dist + "px"
 line.style.left = xClick + "px"
 line.style.top = yClick + "px"
-line.style.background = `rgb(0,${dist},0)`
+
 
 if(xClick > xRand){
     line.style.top = yRand + "px"
