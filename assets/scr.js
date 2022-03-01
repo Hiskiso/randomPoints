@@ -91,39 +91,10 @@ function click(event, custom = false) {
         line.style.background = `rgb(0,${(dist - maxDist) / (0 - maxDist) * (255 - 0) + 0},0)`
     }
 
-
-
-let xRand = !custom? Math.floor(Math.random() * window.innerWidth) : event.x2
-let yRand = !custom? Math.floor(Math.random() * window.innerHeight) : event.y2
-
-randomGenCircle.style.visibility = "visible"
-randomGenCircle.style.left = xRand - 25 + "px"
-randomGenCircle.style.top = yRand - 25 + "px"
-
-console.log("y","x");
-console.log(yClick, xClick)
-console.log(yRand, xRand)
-
- 
-let dist = Math.floor(Math.sqrt(Math.pow((xClick-xRand), 2) + Math.pow((yClick-yRand), 2)))
-
-if(dist < 10){
-    document.write("Чел.....")
-    setTimeout(()=>{window.close()},500)
-}
-
-scoreDisp.innerHTML = dist
-
-if (dist>120) {
-    userCrircle.style.background = "linear-gradient(108deg, #673ab7, #f44336)"
-    randomGenCircle.style.background = "linear-gradient(108deg, #673ab7, #f44336)"
-    line.style.background = `rgb(${dist},0,0)`
-}
-else{
-    userCrircle.style.background = "linear-gradient(108deg, #8bc34a, #4caf50)"
-    randomGenCircle.style.background = "linear-gradient(108deg, #8bc34a, #4caf50)"
-    line.style.background = `rgb(0,${dist},0)`
-}
+    line.style.visibility = "visible"
+    line.style.width = dist + "px"
+    line.style.left = xClick + "px"
+    line.style.top = yClick + "px"
 
 
     if (xClick > xRand) {
