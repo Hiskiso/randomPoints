@@ -47,8 +47,8 @@ userCrircle.style.top = yClick - 25 + "px"
 
 
 
-let xRand = !custom? Math.floor(Math.random() * window.innerHeight) : event.x2
-let yRand = !custom? Math.floor(Math.random() * window.innerWidth) : event.y2
+let xRand = !custom? Math.floor(Math.random() * window.innerWidth) : event.x2
+let yRand = !custom? Math.floor(Math.random() * window.innerHeight) : event.y2
 
 randomGenCircle.style.visibility = "visible"
 randomGenCircle.style.left = xRand - 25 + "px"
